@@ -20,7 +20,7 @@ The assets CLI called twentythree and it  should the following commands
 ```json
 {
     "id": id,
-    "type": "video"|"photo",
+    "type": "video" or "photo",
     "title": string,
     "label": string,
     "url": url
