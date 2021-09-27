@@ -21,6 +21,10 @@ so try to structure the repository like
 
 You should use all the tools you know and have available to make this as simple for you as possible, We are not looking for perfectly indended code or fancy architectural patterns. We are interested in how you think and work with code.
 
+## Questions
+
+always write me at magnus@twentythree.com and I will do my best to help you.
+
 ## Are you more frontend focused?
 
 If your love/strengths/skills are in the frontend then you should go to the frontend challenge [here](./frontend.md)
