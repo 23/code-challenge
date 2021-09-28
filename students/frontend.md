@@ -18,12 +18,13 @@ _Implement an autocomplete component in React or your favorite frontend framewor
 - The search returns objects of two types: photos and live events.
 - Search results should be displayed in a container below the input grouped by their type.
 
-Design:
+### Design:
+
 ![full input](https://preview.ibb.co/crTrqk/full.png)
 
 Consider the following API endpoint is available:
 
-`URL: https://your.service.com/api/videos?search=<searchTerm>`
+`URL: https://your.service.com/api/assets?search=<searchTerm>`
 that returns the following
 
 ```json
