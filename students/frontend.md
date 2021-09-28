@@ -4,31 +4,31 @@ There are two parts to ths challenge.
 
 ## Part 1 - Getting started
 
-_build a click counter in your favorite frontend framework._
+_Build a click counter in your favorite frontend framework._
 
-yes, this is meant to be simple, but there is still alot to show in your understanding of the chosen framework.
+Yes, this is meant to be simple, but there is still a lot to show in your understanding of the chosen framework.
 
 ## Part 2 - Deeper dive
 
-_Implement an autocomplete component in React or your favorite frontend framework and CSS._
+_Implement an autocomplete component in React or your favorite frontend framework and sprinkle with CSS._
 
 - Users should be able to search by typing into the search field.
 - Search requests should be sent once every 300ms seconds while the user is typing.
 - Entering a new character, the old request should be discarded.
-- The search returns objects of two types: photos and live events.
+- The search returns objects of two types: `photos` and `live events`.
 - Search results should be displayed in a container below the input grouped by their type.
 
-### Design:
+### Design
 
 ![full input](https://preview.ibb.co/crTrqk/full.png)
 
 Consider the following API endpoint is available:
 
-`URL: https://your.service.com/api/assets?search=<searchTerm>`
-that returns the following
+`https://your.service.com/api/assets?search=<searchTerm>` that returns the following:
 
 ```json
-[{
+[
+  {
     "id": "1",
     "type": "live",
     "title": "People rule",
@@ -55,8 +55,9 @@ that returns the following
     "title": "people watching tv",
     "label": "televison",
     "url": "/live-event-2"
-  },
-  ...]
+  }
+  ...
+]
 ```
 
-Hint: Lodash/UnderscoreJS can be used.
+> Hint: Lodash/UnderscoreJS can be used.

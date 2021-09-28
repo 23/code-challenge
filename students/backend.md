@@ -1,40 +1,44 @@
 # Student Engineer backend Challenge
 
-There are two parts to this challenge
+There are two parts to this challenge:
 
-## Part 1 - getting started
+## Part 1 - Getting started
 
-`Implement an CLI in your favorite language.`
+_Implement an CLI in your favorite language._
 
-The CLI should have the following commands, I needed it TwentyThree but you are free to call it what you like.
+The assets CLI should a `twentythree` handle and it should have the following commands:
 
-- create : `$ twentythree create --type "the type" --title "a title" --label "a label" --url "a url"`
-- read : 
-  - one : `$ twentythree read [ID]`
+- create : `$ twentythree create -type "video" | "Photo" --title "a title" --label "a label" --url "an url"`
+- read :
   - all : `$ twentythree read`
-- update : `$ twentythree update [ID]`
+  - one : `$ twentythree read [ID]`
+- update : `$ twentythree update [ID] --title "a new title" --label "a new label" --url "a new url"`
 - delete : `$ twentythree delete [ID]`
 
-### The object model as json
+The commands should return meaningful success and error messages upon interaction.
 
-```json
-{
-    "id": id,
-    "type": "video" or "photo",
-    "title": string,
-    "label": string,
-    "url": url
-  }
+### The object model
+
+```ts
+interface Asset {
+  // Should be valid RFC-4122 UUID
+  // @link https://www.ietf.org/rfc/rfc4122.txt
+  id: string,
+  type: "video" | "photo"
+  title: string,
+  label: string,
+  // Should be a valid RFC-3987 url
+  // @link https://www.ietf.org/rfc/rfc3987.txt
+  url: string
+}
 ```
 
 - The id should be generated and not be editable.
 - The type is only set on creation
 
-## Part 2 - extending the CLI to web
+## Part 2 - Extending the CLI to web
 
-Implement the assets CLI as an API endpoint
-
-Build an REST API that can Create, Read, Update and Delete based on your CLI.
+Implement the assets CLI as a RESTFUL CRUD `API` endpoint based on your CLI.
 
 - create : `POST http://localhost/assets`
 - read :
