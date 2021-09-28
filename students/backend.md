@@ -8,11 +8,11 @@ _Implement an CLI in your favorite language._
 
 The assets CLI should a `twentythree` handle and it should have the following commands:
 
-- create : `$ twentythree create -type "video" | "Photo" -title "a title" -label "a label" -url "an url"`
+- create : `$ twentythree create -type "video" | "Photo" --title "a title" --label "a label" --url "an url"`
 - read :
   - all : `$ twentythree read`
   - one : `$ twentythree read [ID]`
-- update : `$ twentythree update [ID] -title "a new title" -label "a new label" -url "a new url"`
+- update : `$ twentythree update [ID] --title "a new title" --label "a new label" --url "a new url"`
 - delete : `$ twentythree delete [ID]`
 
 The commands should return meaningful success and error messages upon interaction.
@@ -21,12 +21,14 @@ The commands should return meaningful success and error messages upon interactio
 
 ```ts
 interface Asset {
-  // Should be UUID
+  // Should be valid RFC-4122 UUID
+  // @link https://www.ietf.org/rfc/rfc4122.txt
   id: string,
   type: "video" | "photo"
   title: string,
   label: string,
-  // Should be a valid RFC 3987 url
+  // Should be a valid RFC-3987 url
+  // @link https://www.ietf.org/rfc/rfc3987.txt
   url: string
 }
 ```
