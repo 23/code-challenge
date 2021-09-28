@@ -6,7 +6,7 @@ There are two parts to this challenge:
 
 _Implement an CLI in your favorite language._
 
-The assets CLI should a `twentythree` handle and it should have the following commands:
+The CLI should have the following structure and commands:
 
 - create : `$ twentythree create -type "video" | "Photo" --title "a title" --label "a label" --url "an url"`
 - read :
@@ -23,7 +23,7 @@ The commands should return meaningful success and error messages upon interactio
 interface Asset {
   // Should be valid RFC-4122 UUID
   // @link https://www.ietf.org/rfc/rfc4122.txt
-  id: string,
+  id: string|uuid,
   type: "video" | "photo"
   title: string,
   label: string,
