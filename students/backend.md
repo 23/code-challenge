@@ -6,9 +6,9 @@ There are two parts to this challenge
 
 `Implement an CLI in your favorite language.`
 
-The assets CLI called twentythree and it  should the following commands
+The CLI should have the following commands, I needed it TwentyThree but you are free to call it what you like.
 
-- create : `$ twentythree create -type "video" or "Photo" -title "a title" -label "a label" -url "a url"`
+- create : `$ twentythree create --type "the type" --title "a title" --label "a label" --url "a url"`
 - read : 
   - one : `$ twentythree read [ID]`
   - all : `$ twentythree read`
